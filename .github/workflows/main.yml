@@ -29,8 +29,8 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - name: Build
-        run: ./build
+#      - name: Build
+#        run: ./build
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
