@@ -42,23 +42,3 @@ jobs:
       uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
       with:
         arguments: build
-    
-#     - name: Cache SonarQube packages
-#       uses: actions/cache@v1
-#       with:
-#           path: ~/.sonar/cache
-#           key: ${{ runner.os }}-sonar
-#           restore-keys: ${{ runner.os }}-sonar
-#     - name: Cache Gradle packages
-#       uses: actions/cache@v1
-#       with:
-#           path: ~/.gradle/caches
-#           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
-#           restore-keys: ${{ runner.os }}-gradle
-    - name: Build and analyze
-      uses: SonarSource/sonarqube-scan-action@v1.1.0
-      env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-#       run: ./gradlew build sonarqube --info
