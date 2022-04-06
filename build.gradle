@@ -2,6 +2,14 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.2.2.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id "org.sonarqube" version "3.3"
+}
+
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "devopsTasks"
+  }
 }
 
 group 'com.example'
